@@ -1,0 +1,5 @@
+use_cache "/Users/chichunchen/workspace/opencv/.cache"
+do_unpack "ippicv_2017u3_mac_intel64_general_20170822.tgz" "c1ebb5dfa5b7f54b0c44e1917805a463" "https://raw.githubusercontent.com/opencv/opencv_3rdparty/dfe3162c237af211e98b8960018b564bc209261d/ippicv/ippicv_2017u3_mac_intel64_general_20170822.tgz" "/Users/chichunchen/workspace/opencv/cmake-build-debug/3rdparty/ippicv"
+#check_md5 "/Users/chichunchen/workspace/opencv/.cache/ippicv/c1ebb5dfa5b7f54b0c44e1917805a463-ippicv_2017u3_mac_intel64_general_20170822.tgz"
+#mkdir "/Users/chichunchen/workspace/opencv/cmake-build-debug/3rdparty/ippicv"
+#unpack "/Users/chichunchen/workspace/opencv/cmake-build-debug/3rdparty/ippicv" "/Users/chichunchen/workspace/opencv/.cache/ippicv/c1ebb5dfa5b7f54b0c44e1917805a463-ippicv_2017u3_mac_intel64_general_20170822.tgz"

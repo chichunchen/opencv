@@ -1,0 +1,4 @@
+/Users/chichunchen/workspace/opencv/samples/cpp/example_cmake/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/chichunchen/workspace/opencv/samples/cpp/example_cmake/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/chichunchen/workspace/opencv/samples/cpp/example_cmake/cmake-build-debug/CMakeFiles/bm.dir
+/Users/chichunchen/workspace/opencv/samples/cpp/example_cmake/cmake-build-debug/CMakeFiles/yolo_objdet.dir

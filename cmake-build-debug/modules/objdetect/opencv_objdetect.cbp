@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="opencv_objdetect"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\cmake\checks\;CMake Files\cmake\templates\;CMake Files\modules\;CMake Files\modules\core\;CMake Files\modules\core\include\;CMake Files\modules\core\include\opencv2\;CMake Files\modules\core\include\opencv2\core\;CMake Files\modules\core\misc\;CMake Files\modules\core\misc\java\;CMake Files\modules\core\misc\java\src\;CMake Files\modules\core\misc\java\src\java\;CMake Files\modules\calib3d\;CMake Files\modules\cudaarithm\;CMake Files\modules\cudabgsegm\;CMake Files\modules\cudacodec\;CMake Files\modules\cudafeatures2d\;CMake Files\modules\cudafilters\;CMake Files\modules\cudaimgproc\;CMake Files\modules\cudalegacy\;CMake Files\modules\cudaobjdetect\;CMake Files\modules\cudaoptflow\;CMake Files\modules\cudastereo\;CMake Files\modules\cudawarping\;CMake Files\modules\cudev\;CMake Files\modules\dnn\;CMake Files\modules\features2d\;CMake Files\modules\flann\;CMake Files\modules\highgui\;CMake Files\modules\imgcodecs\;CMake Files\modules\imgproc\;CMake Files\modules\java\;CMake Files\modules\java\generator\;CMake Files\modules\java\generator\src\;CMake Files\modules\java\generator\src\java\;CMake Files\modules\java\generator\src\java\org\;CMake Files\modules\java\generator\src\java\org\opencv\;CMake Files\modules\java\generator\src\java\org\opencv\osgi\;CMake Files\modules\java\generator\android\;CMake Files\modules\java\generator\android\java\;CMake Files\modules\java\generator\android\java\org\;CMake Files\modules\java\generator\android\java\org\opencv\;CMake Files\modules\java\generator\android\java\org\opencv\android\;CMake Files\modules\js\;CMake Files\modules\ml\;CMake Files\modules\objdetect\;CMake Files\modules\photo\;CMake Files\modules\python\;CMake Files\modules\python\bindings\;CMake Files\modules\python\python2\;CMake Files\modules\python\python3\;CMake Files\modules\shape\;CMake Files\modules\stitching\;CMake Files\modules\superres\;CMake Files\modules\ts\;CMake Files\modules\video\;CMake Files\modules\videoio\;CMake Files\modules\videostab\;CMake Files\modules\viz\;CMake Files\modules\world\;CMake Files\3rdparty\;CMake Files\3rdparty\ippicv\;CMake Files\3rdparty\zlib\;CMake Files\3rdparty\libjpeg\;CMake Files\3rdparty\libtiff\;CMake Files\3rdparty\libwebp\;CMake Files\3rdparty\libjasper\;CMake Files\3rdparty\libpng\;CMake Files\3rdparty\openexr\;CMake Files\3rdparty\protobuf\;CMake Files\3rdparty\ittnotify\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\3rdparty\;CMake Files\cmake-build-debug\3rdparty\ippicv\;CMake Files\cmake-build-debug\3rdparty\ippicv\ippiw_mac\;CMake Files\include\;CMake Files\doc\;CMake Files\data\;CMake Files\apps\;CMake Files\apps\traincascade\;CMake Files\apps\createsamples\;CMake Files\apps\annotation\;CMake Files\apps\visualisation\;CMake Files\apps\interactive-calibration\;CMake Files\apps\version\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_test_objdetect">
+				<Option output="/Users/chichunchen/workspace/opencv/cmake-build-debug/bin/opencv_test_objdetect" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/chichunchen/workspace/opencv/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-D__OPENCV_TESTS=1"/>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add option="-D_USE_MATH_DEFINES"/>
+					<Add option="-D__STDC_CONSTANT_MACROS"/>
+					<Add option="-D__STDC_LIMIT_MACROS"/>
+					<Add option="-D__STDC_FORMAT_MACROS"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug/3rdparty/ippicv/ippicv_mac/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug/3rdparty/ippicv/ippiw_mac/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/ts/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/objdetect/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/imgcodecs/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/videoio/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/core/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/imgproc/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/highgui/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/objdetect/test"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 opencv_test_objdetect"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_test_objdetect/fast">
+				<Option output="/Users/chichunchen/workspace/opencv/cmake-build-debug/bin/opencv_test_objdetect" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/chichunchen/workspace/opencv/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-D__OPENCV_TESTS=1"/>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add option="-D_USE_MATH_DEFINES"/>
+					<Add option="-D__STDC_CONSTANT_MACROS"/>
+					<Add option="-D__STDC_LIMIT_MACROS"/>
+					<Add option="-D__STDC_FORMAT_MACROS"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug/3rdparty/ippicv/ippicv_mac/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug/3rdparty/ippicv/ippiw_mac/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/ts/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/objdetect/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/imgcodecs/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/videoio/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/core/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/imgproc/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/highgui/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/objdetect/test"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 opencv_test_objdetect/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_perf_objdetect">
+				<Option output="/Users/chichunchen/workspace/opencv/cmake-build-debug/bin/opencv_perf_objdetect" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/chichunchen/workspace/opencv/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add option="-D_USE_MATH_DEFINES"/>
+					<Add option="-D__STDC_CONSTANT_MACROS"/>
+					<Add option="-D__STDC_LIMIT_MACROS"/>
+					<Add option="-D__STDC_FORMAT_MACROS"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug/3rdparty/ippicv/ippicv_mac/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug/3rdparty/ippicv/ippiw_mac/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/ts/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/objdetect/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/imgcodecs/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/core/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/imgproc/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/videoio/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/highgui/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/objdetect/perf"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 opencv_perf_objdetect"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_perf_objdetect/fast">
+				<Option output="/Users/chichunchen/workspace/opencv/cmake-build-debug/bin/opencv_perf_objdetect" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/chichunchen/workspace/opencv/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add option="-D_USE_MATH_DEFINES"/>
+					<Add option="-D__STDC_CONSTANT_MACROS"/>
+					<Add option="-D__STDC_LIMIT_MACROS"/>
+					<Add option="-D__STDC_FORMAT_MACROS"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug/3rdparty/ippicv/ippicv_mac/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug/3rdparty/ippicv/ippiw_mac/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/ts/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/objdetect/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/imgcodecs/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/core/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/imgproc/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/videoio/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/highgui/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/objdetect/perf"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 opencv_perf_objdetect/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_objdetect">
+				<Option output="/Users/chichunchen/workspace/opencv/cmake-build-debug/lib/libopencv_objdetect.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add option="-D_USE_MATH_DEFINES"/>
+					<Add option="-D__STDC_CONSTANT_MACROS"/>
+					<Add option="-D__STDC_LIMIT_MACROS"/>
+					<Add option="-D__STDC_FORMAT_MACROS"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug/3rdparty/ippicv/ippicv_mac/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug/3rdparty/ippicv/ippiw_mac/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/objdetect/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/objdetect/src"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/core/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/imgproc/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 opencv_objdetect"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_objdetect/fast">
+				<Option output="/Users/chichunchen/workspace/opencv/cmake-build-debug/lib/libopencv_objdetect.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add option="-D_USE_MATH_DEFINES"/>
+					<Add option="-D__STDC_CONSTANT_MACROS"/>
+					<Add option="-D__STDC_LIMIT_MACROS"/>
+					<Add option="-D__STDC_FORMAT_MACROS"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug/3rdparty/ippicv/ippicv_mac/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug/3rdparty/ippicv/ippiw_mac/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/objdetect/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/objdetect/src"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/core/include"/>
+					<Add directory="/Users/chichunchen/workspace/opencv/modules/imgproc/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 opencv_objdetect/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake-build-debug/cvconfig.h">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/opencl_kernels_objdetect.cpp">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/opencl_kernels_objdetect.cpp.rule">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake-build-debug/modules/objdetect/opencl_kernels_objdetect.hpp">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake-build-debug/opencv2/opencv_modules.hpp">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/include/opencv2/objdetect.hpp">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/include/opencv2/objdetect/detection_based_tracker.hpp">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/include/opencv2/objdetect/objdetect.hpp">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/include/opencv2/objdetect/objdetect_c.h">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/perf/opencl/perf_cascades.cpp">
+			<Option target="opencv_perf_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/perf/opencl/perf_hogdetect.cpp">
+			<Option target="opencv_perf_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/perf/perf_main.cpp">
+			<Option target="opencv_perf_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/perf/perf_precomp.hpp">
+			<Option target="opencv_perf_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/src/cascadedetect.cpp">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/src/cascadedetect.hpp">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/src/cascadedetect_convert.cpp">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/src/detection_based_tracker.cpp">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/src/haar.avx.cpp">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/src/haar.cpp">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/src/haar.hpp">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/src/hog.cpp">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/src/main.cpp">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/src/opencl/cascadedetect.cl">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/src/opencl/objdetect_hog.cl">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/src/precomp.hpp">
+			<Option target="opencv_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/test/opencl/test_hogdetector.cpp">
+			<Option target="opencv_test_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/test/test_cascadeandhog.cpp">
+			<Option target="opencv_test_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/test/test_main.cpp">
+			<Option target="opencv_test_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/test/test_precomp.hpp">
+			<Option target="opencv_test_objdetect"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVMinDepVersions.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVUtils.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVDownload.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVDetectCXXCompiler.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVVersion.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVDetectPython.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVCompilerOptions.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVCompilerOptimizations.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVPCHSupport.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVModule.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVFindLibsGrfmt.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVFindLibsGUI.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVFindLibsVideo.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVFindLibsPerf.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVFindIPP.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVFindIPPIW.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVDetectCUDA.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/FindCUDA.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVFindLAPACK.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVFindMKL.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVFindOpenBLAS.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVFindAtlas.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVFindProtobuf.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVDetectApacheAnt.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVDetectOpenCL.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVFindMatlab.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVDetectVTK.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVDetectTrace.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVExtraTargets.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVGenHeaders.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVGenPkgconfig.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVGenAndroidMK.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVGenConfig.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVGenABI.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/OpenCVPackaging.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/checks/cxx11.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/checks/cpu_sse.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/checks/cpu_sse2.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/checks/cpu_sse3.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/checks/cpu_ssse3.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/checks/cpu_sse41.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/checks/cpu_popcnt.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/checks/cpu_sse42.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/checks/cpu_fp16.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/checks/cpu_avx.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/checks/cpu_avx2.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/checks/cpu_avx512.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/checks/cpu_avx512skx.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/checks/ffmpeg_test.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/checks/lapack_check.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/templates/custom_hal.hpp.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/templates/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/templates/cvconfig.h.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/templates/cvconfig.h.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/templates/cv_cpu_config.h.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/templates/opencv_modules.hpp.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/templates/OpenCVConfig.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/templates/OpenCVConfig-version.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/templates/OpenCVConfig-version.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake/templates/OpenCVConfig.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/core/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\core\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/core/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\core\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/core/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\core\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/core/include/opencv2/core/version.hpp">
+			<Option virtualFolder="CMake Files\modules\core\include\opencv2\core\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/core/misc/java/src/java/core+Core.jcode.in">
+			<Option virtualFolder="CMake Files\modules\core\misc\java\src\java\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/core/misc/java/src/java/core+Core.jcode.in">
+			<Option virtualFolder="CMake Files\modules\core\misc\java\src\java\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/calib3d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\calib3d\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/calib3d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\calib3d\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/calib3d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\calib3d\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/cudaarithm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudaarithm\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/cudabgsegm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudabgsegm\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/cudacodec/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudacodec\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/cudafeatures2d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudafeatures2d\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/cudafilters/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudafilters\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/cudaimgproc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudaimgproc\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/cudalegacy/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudalegacy\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/cudaobjdetect/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudaobjdetect\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/cudaoptflow/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudaoptflow\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/cudastereo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudastereo\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/cudawarping/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudawarping\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/cudev/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudev\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/dnn/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\dnn\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/dnn/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\dnn\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/dnn/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\dnn\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/features2d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\features2d\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/features2d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\features2d\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/features2d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\features2d\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/flann/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\flann\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/flann/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\flann\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/flann/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\flann\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/highgui/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\highgui\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/highgui/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\highgui\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/highgui/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\highgui\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/imgcodecs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\imgcodecs\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/imgcodecs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\imgcodecs\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/imgcodecs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\imgcodecs\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/imgproc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\imgproc\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/imgproc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\imgproc\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/imgproc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\imgproc\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/java/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\java\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/java/common.cmake">
+			<Option virtualFolder="CMake Files\modules\java\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/java/common.cmake">
+			<Option virtualFolder="CMake Files\modules\java\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/java/generator/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\java\generator\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/java/generator/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\java\generator\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/java/generator/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\java\generator\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/java/generator/src/java/org/opencv/osgi/OpenCVNativeLoader.java.in">
+			<Option virtualFolder="CMake Files\modules\java\generator\src\java\org\opencv\osgi\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/java/generator/src/java/org/opencv/osgi/OpenCVNativeLoader.java.in">
+			<Option virtualFolder="CMake Files\modules\java\generator\src\java\org\opencv\osgi\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/java/generator/android/java/org/opencv/android/OpenCVLoader.java.in">
+			<Option virtualFolder="CMake Files\modules\java\generator\android\java\org\opencv\android\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/java/generator/android/java/org/opencv/android/OpenCVLoader.java.in">
+			<Option virtualFolder="CMake Files\modules\java\generator\android\java\org\opencv\android\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/js/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\js\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/ml/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\ml\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/ml/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\ml\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/ml/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\ml\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\objdetect\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\objdetect\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/objdetect/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\objdetect\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/photo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\photo\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/photo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\photo\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/photo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\photo\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/python/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\python\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/python/bindings/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\python\bindings\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/python/bindings/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\python\bindings\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/python/bindings/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\python\bindings\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/python/python2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\python\python2\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/python/python3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\python\python3\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/shape/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\shape\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/shape/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\shape\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/shape/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\shape\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/stitching/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\stitching\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/stitching/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\stitching\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/stitching/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\stitching\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/superres/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\superres\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/superres/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\superres\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/superres/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\superres\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/ts/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\ts\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/ts/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\ts\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/ts/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\ts\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/video/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\video\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/video/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\video\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/video/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\video\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/videoio/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\videoio\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/videoio/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\videoio\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/videoio/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\videoio\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/videostab/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\videostab\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/videostab/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\videostab\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/videostab/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\videostab\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/viz/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\viz\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/modules/world/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\world\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/ippicv/ippicv.cmake">
+			<Option virtualFolder="CMake Files\3rdparty\ippicv\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/zlib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\zlib\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/zlib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\zlib\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/libjpeg/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libjpeg\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/libjpeg/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libjpeg\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/libtiff/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libtiff\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/libtiff/tif_config.h.cmake.in">
+			<Option virtualFolder="CMake Files\3rdparty\libtiff\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/libtiff/tiffconf.h.cmake.in">
+			<Option virtualFolder="CMake Files\3rdparty\libtiff\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/libtiff/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libtiff\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/libtiff/tif_config.h.cmake.in">
+			<Option virtualFolder="CMake Files\3rdparty\libtiff\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/libtiff/tiffconf.h.cmake.in">
+			<Option virtualFolder="CMake Files\3rdparty\libtiff\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/libwebp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libwebp\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/libwebp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libwebp\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/libjasper/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libjasper\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/libjasper/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libjasper\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/libpng/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libpng\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/libpng/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libpng\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/openexr/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\openexr\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/openexr/IlmBaseConfig.h.cmakein">
+			<Option virtualFolder="CMake Files\3rdparty\openexr\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/openexr/OpenEXRConfig.h.cmakein">
+			<Option virtualFolder="CMake Files\3rdparty\openexr\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/openexr/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\openexr\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/openexr/IlmBaseConfig.h.cmakein">
+			<Option virtualFolder="CMake Files\3rdparty\openexr\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/openexr/OpenEXRConfig.h.cmakein">
+			<Option virtualFolder="CMake Files\3rdparty\openexr\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/protobuf/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\protobuf\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/protobuf/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\protobuf\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/ittnotify/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\ittnotify\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/3rdparty/ittnotify/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\ittnotify\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake-build-debug/3rdparty/ippicv/ippiw_mac/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cmake-build-debug\3rdparty\ippicv\ippiw_mac\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/cmake-build-debug/3rdparty/ippicv/ippiw_mac/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cmake-build-debug\3rdparty\ippicv\ippiw_mac\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/include/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\include\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/doc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\doc\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/data/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\data\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/apps/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/apps/traincascade/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\traincascade\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/apps/traincascade/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\traincascade\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/apps/createsamples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\createsamples\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/apps/createsamples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\createsamples\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/apps/annotation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\annotation\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/apps/annotation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\annotation\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/apps/visualisation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\visualisation\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/apps/visualisation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\visualisation\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/apps/interactive-calibration/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\interactive-calibration\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/apps/interactive-calibration/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\interactive-calibration\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/apps/version/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\version\"/>
+		</Unit>
+		<Unit filename="/Users/chichunchen/workspace/opencv/apps/version/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\version\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

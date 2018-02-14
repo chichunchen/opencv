@@ -4,6 +4,9 @@ cmake_minimum_required(VERSION 2.8)
 # Define project name
 project(opencv_example_project)
 
+set("OpenCV_DIR" "/Users/chichunchen/workspace/opencv/build")
+set(CMAKE_CXX_FLAGS "-std=gnu++11 -g")
+
 # Find OpenCV, you may need to set OpenCV_DIR variable
 # to the absolute path to the directory containing OpenCVConfig.cmake file
 # via the command line or GUI
@@ -22,9 +25,14 @@ if(CMAKE_VERSION VERSION_LESS "2.8.11")
   # Add OpenCV headers location to your include paths
   include_directories(${OpenCV_INCLUDE_DIRS})
 endif()
+include_directories(.)
 
 # Declare the executable target built from your sources
-add_executable(opencv_example example.cpp)
+set(YOLO_SOURCES yolo.cpp objdet.cpp objdet.hpp)
+add_executable(yolo_objdet ${YOLO_SOURCES})
+set(BM_SOURCES bm.cpp objdet.cpp objdet.hpp)
+add_executable(bm ${BM_SOURCES})
 
 # Link your application with OpenCV libraries
-target_link_libraries(opencv_example ${OpenCV_LIBS})
+target_link_libraries(yolo_objdet ${OpenCV_LIBS})
+target_link_libraries(bm ${OpenCV_LIBS})
