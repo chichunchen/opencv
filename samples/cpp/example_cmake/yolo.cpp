@@ -14,9 +14,11 @@ using namespace cv;
 using namespace std;
 
 //#define DRAW_GT
-#define DRAW_DET
+//#define DRAW_DET
 //#define DRAW_MV
 //#define DRAW_EXPL
+//#define DRAW_INTP
+#define DUMP
 
 void find_gt_bbox(Rect *pred_bbox, vector<Pred_Rect *> *frame_gt_bbox, float &iou) {
     float max_iou = -1;
@@ -47,7 +49,6 @@ void draw_gt_bboxes(Mat &frame, unordered_map<int, vector<Rect *> > &gt_bbox_map
     }
 }
 
-// TODO check why this one is not drawing
 void draw_det_bboxes(Mat &frame, vector<Pred_Rect *> &temp_det_bboxes, int frame_id) {
     for (int i = 0; i < temp_det_bboxes.size(); i++) {
         int x = temp_det_bboxes[i]->rect->x + temp_det_bboxes[i]->rect->width;
@@ -57,16 +58,25 @@ void draw_det_bboxes(Mat &frame, vector<Pred_Rect *> &temp_det_bboxes, int frame
     }
 }
 
+void draw_interpolate_bboxes(Mat &frame, vector<Pred_Rect *> &interpolate_bboxes, int frame_id) {
+    for (int i = 0; i < interpolate_bboxes.size(); i++) {
+        int x = interpolate_bboxes[i]->rect->x + interpolate_bboxes[i]->rect->width;
+        int y = interpolate_bboxes[i]->rect->y + interpolate_bboxes[i]->rect->height;
+        rectangle(frame, Point(interpolate_bboxes[i]->rect->x, interpolate_bboxes[i]->rect->y),
+                  Point(x, y), cv::Scalar(0, 0, 255), 2);
+    }
+}
+
 int main(int argc, char **argv) {
     const String keys =
             "{@input          |       | path to video file                                 }"
-                    "{@mvs            |       | path to motion vector file                         }"
-                    "{@gt             |       | path to ground truth file                          }"
-                    "{@det            |       | path to detected bbox file                         }"
-                    "{mb_size         |  16   | macroblock size                                    }"
-                    "{adaptive        | false | adaptive of constant mode?                         }"
-                    "{ip_size         |  2    | consecutively interpolated frames in constant mode }"
-                    "{threshold       | 0.92  | conf threshold for mv                              }";
+            "{@mvs            |       | path to motion vector file                         }"
+            "{@gt             |       | path to ground truth file                          }"
+            "{@det            |       | path to detected bbox file                         }"
+            "{mb_size         |  16   | macroblock size                                    }"
+            "{adaptive        | false | adaptive of constant mode?                         }"
+            "{ip_size         |  2    | consecutively interpolated frames in constant mode }"
+            "{threshold       | 0.92  | conf threshold for mv                              }";
 
     // Read various files, get basic video info
     ifstream mvs_file;
@@ -81,12 +91,19 @@ int main(int argc, char **argv) {
     int ip_winsize;
     bool adaptive;
     double threshold;
+    FILE* dump = NULL;
 
     CommandLineParser parser(argc, argv, keys);
 
     bool success = tracker_setup(parser, mvs_file, gt_file, det_file, cap,
                                  frameWidth, frameHeight, WIDTH_MB, HEIGHT_MB, MVSIZE_PER_FRAME,
                                  FRAME_COUNT, MB_SIZE, ip_winsize, adaptive, threshold);
+
+    string mvs_s = parser.get<string>("@mvs");
+    std::size_t found_dot = mvs_s.find('.');
+    string dump_file = mvs_s.substr(0, found_dot) + string(".dump");
+    dump = fopen(dump_file.c_str(), "w+");
+
     if (!success) return 0;
 
     // Process motion vectors
@@ -146,11 +163,12 @@ int main(int argc, char **argv) {
             temp_det_bboxes.clear();
             get_detected_bboxes(&det_bbox_map, frame_id, temp_det_bboxes);
 
+            det_bboxes = &temp_det_bboxes;
+
+
 #ifdef DRAW_DET
             draw_det_bboxes(frame, temp_det_bboxes, frame_id);
 #endif
-
-            det_bboxes = &temp_det_bboxes;
 
             if (adaptive) {
                 // In reality we should calculate the AP here..
@@ -169,6 +187,10 @@ int main(int argc, char **argv) {
                     //fprintf(stdout, "frame_%d: %f, %d\n", frame_id, iou, ip_winsize);
                 }
             }
+        } else {
+#ifdef DRAW_INTP
+            draw_interpolate_bboxes(frame, *next_bboxes, frame_id);
+#endif
         }
 
         // dump predicted bboxes
@@ -178,13 +200,19 @@ int main(int argc, char **argv) {
         if (base_bboxes) {
             for (int i = 0; i < base_bboxes->size(); i++) {
                 Pred_Rect *base_bbox = (*base_bboxes)[i];
+
                 fprintf(stdout, "%d %d %d,%d,%d,%d\n", frame_id, base_bbox->conf, base_bbox->rect->x,
                         base_bbox->rect->y, base_bbox->rect->width, base_bbox->rect->height);
+
+#ifdef DUMP
+                fprintf(dump, "%d %d %d %d %d %d\n", frame_id, i, base_bbox->rect->x,
+                        base_bbox->rect->y, base_bbox->rect->width, base_bbox->rect->height);
+#endif
             }
         }
 
-        // TODO trace this
         // Make a prediction for the next frame.
+        // push pred_bbox to temp_next_bboxes
         if (base_bboxes) {
             vector<Pred_Rect *> *temp_next_bboxes = new vector<Pred_Rect *>();
             for (int i = 0; i < base_bboxes->size(); i++) {
@@ -197,7 +225,6 @@ int main(int argc, char **argv) {
 
                 Pred_Rect *pred_bbox = new Pred_Rect(next_bbox, base_bbox->conf);
                 temp_next_bboxes->push_back(pred_bbox);
-
             }
             next_bboxes = temp_next_bboxes;
         }
@@ -206,17 +233,23 @@ int main(int argc, char **argv) {
         draw_mv_arrows(&frame, mvs, frame_id);
 #endif
 
-#ifdef DRAW_DET
-        draw_det_bboxes(frame, temp_det_bboxes, frame_id);
-#endif
-
-#if defined(DRAW_MV) || defined(DRAW_EXPL) || defined(DRAW_GT) || defined(DRAW_DET)
+#if defined(DRAW_MV) || defined(DRAW_EXPL) || defined(DRAW_GT) || defined(DRAW_DET) || defined(DRAW_INPL)
         gen_images(frame_id, FRAME_COUNT, &frame);
 #endif
     }
+
+    // last one
+#ifdef DRAW_INTP
+    draw_interpolate_bboxes(frame, *next_bboxes, frame_id);
+#endif
+#ifdef DRAW_MV
+    draw_mv_arrows(&frame, mvs, frame_id);
+#endif
+
     fprintf(stdout, "\nTotal Annotated: %d (%d, %d)\n", det_count + ip_count, det_count, ip_count);
 
     cap.release();
+    fclose(dump);
 
     return 0;
 }

@@ -184,7 +184,7 @@ int main(int argc, char **argv) {
     "{@end       |       | end frame number                   }"
     "{if_gap     |  20   | window size for an I frame         }"
     "{bits       |  4    | number of bits in image file names }"
-    "{mb_size    |  16   | macroblock size                    }"
+    "{mb_size    |  32   | macroblock size                    }"
     "{format     | jpg   | image format                       }"
     "{mode       | tss   | search mode: tss or es             }"
     "{direction  | bw    | search direction: fw or bw         }"

@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.8)
 # Define project name
 project(opencv_example_project)
 
-set("OpenCV_DIR" "/Users/chichunchen/workspace/opencv/build")
+set("OpenCV_DIR" "/home/aras/workspace/urvr-research/opencv/build/")
 set(CMAKE_CXX_FLAGS "-std=gnu++11 -g")
 
 # Find OpenCV, you may need to set OpenCV_DIR variable
